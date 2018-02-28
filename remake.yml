@@ -1,0 +1,161 @@
+packages:
+  - plyr
+  - rstan
+  - brms
+  - loo
+  - LoLinR
+  - fontcm
+  - maps
+  - extrafont
+  - RColorBrewer
+
+sources:
+  - R/functions-analyses.R
+  - R/functions-figures.R
+  - R/functions-tables.R
+
+targets:
+  all:
+    depends:
+      - output/figures/fig1.pdf
+      - output/figures/fig2.pdf
+      - output/figures/fig3.pdf
+      - output/figures/fig4.pdf
+      - output/figures/figS1.pdf
+      - output/figures/figS2.pdf
+      - output/tables/table1.csv
+      - output/tables/tableS1.csv
+      - output/tables/tableS2.csv
+
+  # Experimental Data ---------------------------------------
+  familyInfo:
+    command: readFile('data/experimentalData/familyInfo.csv')
+
+  experimentalData:
+    command: readFile('data/experimentalData/data.csv')
+
+  emDatabaseList:
+    command: processDataEm(experimentalData, familyInfo)
+
+  growthEmData:
+    command: extractGrowthEmData(emDatabaseList)
+
+  respirationEmData:
+    command: extractRespirationEmData(emDatabaseList)
+
+  # FishBase Data -------------------------------------------
+  # Aspect ratio and trophic level:
+  # these are extracted for the species-specific pages on FishBase,
+  # with trophic level available from the bottom of the page,
+  # as aspect ratio from the morphometrics table;
+  # for species with missing data, we used data from the closest 
+  # species available.
+  # Metabolic rates
+  # same database utilized by Barneche et al. 2014 Ecol Lett
+  # Growth table:
+  # http://www.fishbase.de/Topic/List.php?group=9
+  # Length-weight table:
+  # http://www.fishbase.de/Topic/List.php?group=12
+  # downloaded on 15/07/2017
+  # Please see the stashed file R/functions-fishBaseDownload.R
+  # to access the original code used to scrape the data from FishBase
+  trophicLevelData:
+    command: readFile('data/fishBaseData/trophicLevelData.csv')
+
+  aspectRatioData:
+    command: readFile('data/fishBaseData/aspectRatioData.csv')
+
+  metabolicRates:
+    command: readAndProcessMetabolicRates('data/fishBaseData/metabolicRatesData.csv', trophicLevelData, aspectRatioData)
+
+  standardMetRates:
+    command: subsetMetabolicRates(metabolicRates, I('standard'))
+
+  fishBaseGrowthData:
+    command: readFile('data/fishBaseData/fishBaseGrowthData.csv')
+
+  fishBaseLwData:
+    command: readFile('data/fishBaseData/fishBaseLwData.csv')
+
+  fishBaseHabitatData:
+    command: readFile('data/fishBaseData/fishBaseHabitatData.csv')
+  
+  growthFishBase:
+    command: mergeFishBaseData(fishBaseGrowthData, fishBaseLwData, fishBaseHabitatData)
+
+  # Statistical Models for growth rates --------------------------------------
+  stanModelsExperimentalData:
+    command: runStanModelsExperimentalData(respirationEmData, growthEmData)
+
+  reStanOut:
+    command: extractStanObjects(stanModelsExperimentalData, I('reStanOut'))
+
+  geStanOut:
+    command: extractStanObjects(stanModelsExperimentalData, I('geStanOut'))
+
+  stanModelsFishBaseData:
+    command: runStanModelsFishBaseData(growthFishBase)
+
+  gfStanOut:
+    command: extractStanObjects(stanModelsFishBaseData, I('gfStanOut'))
+
+  # Statistical Models for metabolic rates -----------------------------------
+  standardMetabolicRatesFit:
+    command: runSchoolFieldFitMetabolicRates(standardMetRates)
+  
+  standardMetabolicRatesFitFull:
+    command: runSchoolFieldFitStandardRatesFull(standardMetRates)
+
+  standardMetabolicRatesFitFullMinusAspectRatio:
+    command: runSchoolFieldFitStandardRatesFullMinusAspectRatio(standardMetRates)
+  
+  modelSelectionTrophic:
+    command: runModelSelection(standardMetabolicRatesFitFullMinusAspectRatio, standardMetabolicRatesFit)
+
+  modelSelectionAspect:
+    command: runModelSelection(standardMetabolicRatesFitFull, standardMetabolicRatesFitFullMinusAspectRatio)
+
+  # Statistical Models for Em ------------------------------------------------
+  fishBaseGrowthDataWithEm:
+    command: calculateEmFishBaseData(growthFishBase, standardMetRates, standardMetabolicRatesFitFullMinusAspectRatio, aspectRatioData, trophicLevelData)
+
+  tempDependenceEmFishBaseData:
+    command: estimateTempDependenceEm(data = fishBaseGrowthDataWithEm, response = I('Em_J_g'), predictors = I('temperature + log(trophicLevel) + log(aspectRatio + 1)'), randomSlope = I('temperature'), randomGroup = I('family'))
+
+  tempDependenceEmExperimentalData:
+    command: estimateTempDependenceEm(data = growthEmData, response = I('emStar'), predictors = I('tempC'), randomSlope = I('tempC'), randomGroup = I('species'))
+
+  # Tables -------------------------------------------------------------------
+  table1:
+    command: makeTable1(geStanOut, gfStanOut)
+
+  output/tables/table1.csv:
+    command: writeTable1(target_name, table1)
+  
+  tableS1:
+    command: makeTableS1(standardMetabolicRatesFitFull, standardMetabolicRatesFitFullMinusAspectRatio, standardMetabolicRatesFit)
+
+  output/tables/tableS1.csv:
+    command: writeTableS1(target_name, tableS1)
+
+  output/tables/tableS2.csv:
+    command: writeTableS2(target_name)
+
+  # Figures -------------------------------------------------  
+  output/figures/fig1.pdf:
+    command: makeFigure1(dest = target_name, growthFishBase, gfStanOut, growthEmData, geStanOut)
+
+  output/figures/fig2.pdf:
+    command: makeFigure2(dest = target_name, fishBaseGrowthDataWithEm, growthEmData, tempDependenceEmFishBaseData, tempDependenceEmExperimentalData)
+
+  output/figures/fig3.pdf:
+    command: makeFigure3(dest = target_name)
+
+  output/figures/fig4.pdf:
+    command: makeFigure4(dest = target_name)
+
+  output/figures/figS1.pdf:
+    command: makeFigureS1(dest = target_name, growthFishBase)
+
+  output/figures/figS2.pdf:
+    command: makeFigureS2(dest = target_name, growthFishBase, gfStanOut)

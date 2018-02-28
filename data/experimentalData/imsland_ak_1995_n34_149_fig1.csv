@@ -1,0 +1,7 @@
+days     , wet_mass_g , growth_g_d , temp_kelvin , month_period ,obs_growth
+145.1957 , 17.6552    , 0.1345569  , 283.15      , 13-26Mar     ,"growth calculated for periods 13-26Mar as instantaneousGrowth(17.6552 , 15.9335 , 145.1957, 131.7327)"
+159.608  , 20.5979    , 0.2203220  , 283.15      , 27Mar-9Apr   ,"growth calculated for periods 27Mar-9Apr as instantaneousGrowth(20.5979 , 17.6552 , 159.608 , 145.1957)"
+172.8433 , 24.2716    , 0.3009680  , 283.15      , 10Mar-23Apr  ,"growth calculated for periods 10Mar-23Apr as instantaneousGrowth(24.2716 , 20.5979 , 172.8433, 159.608 )"
+145.2559 , 87.9298    , 1.3225335  , 289.15      , 13-26Mar     ,"growth calculated for periods 13-26Mar as instantaneousGrowth(87.9298 , 71.8115 , 145.1957, 131.7327)"
+159.4868 , 103.8049   , 1.1954342  , 289.15      , 27Mar-9Apr   ,"growth calculated for periods 27Mar-9Apr as instantaneousGrowth(103.8049, 87.9298 , 159.608 , 145.1957)"
+173.5021 , 124.5598   , 1.7154018  , 289.15      , 10Mar-23Apr  ,"growth calculated for periods 10Mar-23Apr as instantaneousGrowth(124.5598, 103.8049, 172.8433, 159.608 )"

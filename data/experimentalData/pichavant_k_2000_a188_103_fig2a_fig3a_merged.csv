@@ -1,0 +1,2 @@
+wet_mass_g, growth_g_d, umolO2_g_h, umolO2_h,temp_kelvin,obs_growth 
+172.8498  , 1.544728  , 6.896262  , 1192.018,290.15,"growth calculated as instantaneousGrowth(172.8498, 151.1648, 30, 15)"

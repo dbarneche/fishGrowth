@@ -1,0 +1,5 @@
+initial_wet_mass_g , final_wet_mass_g , temp_kelvin , mgO2_kg_h, growth_g_d, mgO2_h  ,obs_growth
+9.8                , 15.3             , 299.14      , 58.02    , 0.2271899 , 0.887706,"growth calculated as instantaneousGrowth(15.3 , 9.8   ,31, 1)"
+10.36              , 18.84            , 304.15      , 66.04    , 0.3755629 , 1.244194,"growth calculated as instantaneousGrowth(18.84, 10.36 ,31, 1)"
+10.01              , 17.38            , 306.15      , 76.28    , 0.3196388 , 1.325746,"growth calculated as instantaneousGrowth(17.38, 10.01 ,31, 1)"
+9.99               , 14.31            , 309.15      , 93.27    , 0.1714214 , 1.334694,"growth calculated as instantaneousGrowth(14.31, 9.99  ,31, 1)"

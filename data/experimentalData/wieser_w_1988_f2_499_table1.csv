@@ -1,0 +1,8 @@
+days,wet_mass_g,temp_kelvin,umolO2_gwet_mass_h,umolO2_h,growth_g_d,obs
+7, 0.002, 293.15, 32.2, 0.06440, ,
+11,0.0025,293.15, 31.6, 0.07900, 0.0001394647,"data for medium ration; mass converted to g, growth rates converted to absolute rates assuming a constant dry-wet mass ratio; growth calculated as instantaneousGrowth(0.0025, 0.002,  11, 7)"
+14,0.0041,293.15, 25.7, 0.10537, 0.0006760849,"data for medium ration; mass converted to g, growth rates converted to absolute rates assuming a constant dry-wet mass ratio; growth calculated as instantaneousGrowth(0.0041, 0.0025, 14, 11)"
+18,0.0073,293.15, 25.7, 0.18761, 0.0010528195,"data for medium ration; mass converted to g, growth rates converted to absolute rates assuming a constant dry-wet mass ratio; growth calculated as instantaneousGrowth(0.0073, 0.0041, 18, 14)"
+21,0.0101,293.15, 27.5, 0.27775, 0.0010930256,"data for medium ration; mass converted to g, growth rates converted to absolute rates assuming a constant dry-wet mass ratio; growth calculated as instantaneousGrowth(0.0101, 0.0073, 21, 18)"
+25,0.0169,293.15, 20.2, 0.34138, 0.0021749379,"data for medium ration; mass converted to g, growth rates converted to absolute rates assuming a constant dry-wet mass ratio; growth calculated as instantaneousGrowth(0.0169, 0.0101, 25, 21)"
+27,0.0186,293.15, 22.1, 0.41106, 0.0008913860,"data for medium ration; mass converted to g, growth rates converted to absolute rates assuming a constant dry-wet mass ratio; growth calculated as instantaneousGrowth(0.0186, 0.0169, 27, 25)"

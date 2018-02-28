@@ -1,0 +1,5 @@
+initial_wet_mass_g,final_wet_mass_g,days,lO2_d,growth_g_d,obs
+1.54,1.59,21,0.191,0.002419193,"For each one of the Trouvit groups I selected the ones where the feed was 8-25% to the initial weight of the fish; growth calculated as instantaneousGrowth(1.59,1.54,21+1,1)"
+7.83,9.58,28,1.100,0.069015374,"For each one of the Trouvit groups I selected the ones where the feed was 8-25% to the initial weight of the fish; growth calculated as instantaneousGrowth(9.58,7.83,28+1,1)"
+50.0,50.5,28,4.470,0.017946132,"For each one of the Trouvit groups I selected the ones where the feed was 8-25% to the initial weight of the fish; growth calculated as instantaneousGrowth(50.5,50.0,28+1,1)"
+96.9,108 ,42,11.6 ,0.278875821,"For each one of the Trouvit groups I selected the ones where the feed was 8-25% to the initial weight of the fish; growth calculated as instantaneousGrowth(108 ,96.9,42+1,1)"

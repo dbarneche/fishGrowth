@@ -1,0 +1,2 @@
+mgO2_kg_h,growth_g_d,wet_mass_g,mgO2_h,obs_growth
+80.53685,0.7306699,102.076,8.22088,"growth calculated as instantaneousGrowth(117.9, 95.5, 35, 1); mass calculated for 23rd Jan, i.e., 9 days after 14th Jan (95.5 g), assuming fixed growth rate between 14th Jan and 11th Feb; mass at 23rd Jan estimated as  95.5 + instantaneousGrowth(117.9, 95.5, 35, 1) * 9"

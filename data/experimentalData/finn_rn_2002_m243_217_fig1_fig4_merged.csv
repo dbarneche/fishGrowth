@@ -1,0 +1,5 @@
+days    , dry_mass_mg , growth_dry_mass_mg_day , temp_celsius , nmolO2_hr , rowNumber_from_fig4Csv_header_counts ,obs_growth 
+25.1457 , 0.0868      , 0.005695848            , 10.8345      , 13.0577   , 60                                   ,"growth calculated as instantaneousGrowth(0.0868 , 0.0545 , 25.1457 , 18.0533) - check instantaneousGrowth.R"
+31.9827 , 0.1798      , 0.01915128             , 10.8676      , 26.1456   , 65                                   ,"growth calculated as instantaneousGrowth(0.1798 , 0.0868 , 31.9827 , 25.1457) - check instantaneousGrowth.R"
+38.9918 , 0.5124      , 0.07655994             , 14.0168      , 82.3733   , 26                                   ,"growth calculated as instantaneousGrowth(0.5124 , 0.1798 , 38.9918 , 31.9827) - check instantaneousGrowth.R"
+47.0266 , 1.665       , 0.2442078              , 13.7843      , 259.4995  , 30                                   ,"growth calculated as instantaneousGrowth(1.665  , 0.5124 , 47.0266 , 38.9918) - check instantaneousGrowth.R"

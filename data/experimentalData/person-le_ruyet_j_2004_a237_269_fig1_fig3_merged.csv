@@ -1,0 +1,7 @@
+growth_g_d,temp_kelvin,mgO2_kg_h,wet_mass_g,mgO2_h,obs_growth
+0.5701465, 286.15, 142.1185, 108.1089, 15.36427,"growth calculated as instantaneousGrowth(108.1089, 100.4144, 56, 42)"
+0.9749234, 289.15, 166.9748, 123.3526, 20.59678,"growth calculated as instantaneousGrowth(123.3526, 110.4317, 56, 42)"
+1.3501658, 292.15, 224.7936, 143.6775, 32.29778,"growth calculated as instantaneousGrowth(143.6775, 125.9658, 56, 42)"
+1.6729191, 295.15, 246.3855, 158.9213, 39.15590,"growth calculated as instantaneousGrowth(158.9213, 137.1445, 56, 42)"
+2.2033787, 298.15, 283.9696, 177.0686, 50.28210,"growth calculated as instantaneousGrowth(177.0686, 148.7588, 56, 42)"
+1.7671806, 302.15, 308.5163, 176.3427, 54.40460,"growth calculated as instantaneousGrowth(176.3427, 153.2593, 56, 42)"

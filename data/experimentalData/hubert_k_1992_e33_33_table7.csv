@@ -1,0 +1,14 @@
+species           , dry_mass_mg , joules_day , growth_percent_day , growth_mg_d
+Alburnus alburnus , 0.6         , 0.8        , 7.6                , 0.0456     
+Alburnus alburnus , 2           , 2.2        , 7.1                , 0.142      
+Alburnus alburnus , 8           , 7.3        , 6.5                , 0.52       
+Alburnus alburnus , 50          , 35.9       , 5.5                , 2.75       
+Abramis barellus  , 2           , 2.8        , 11.4               , 0.228      
+Abramis barellus  , 8           , 10.1       , 9.5                , 0.76       
+Abramis barellus  , 50          , 54.7       , 6                  , 3          
+Abramis barellus  , 100         , 103.6      , 4.2                , 4.2        
+Rutilus rutilus   , 0.6         , 0.8        , 11.1               , 0.0666     
+Rutilus rutilus   , 2           , 2.3        , 10                 , 0.2        
+Rutilus rutilus   , 8           , 8.5        , 8.4                , 0.672      
+Rutilus rutilus   , 50          , 46.5       , 5.7                , 2.85       
+Rutilus rutilus   , 100         , 88.6       , 4.2                , 4.2        

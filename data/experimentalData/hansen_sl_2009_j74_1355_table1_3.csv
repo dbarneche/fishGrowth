@@ -1,0 +1,18 @@
+growth_wet_mass_g,specific_growth_percent_day,metabolic_rates_wet_mass_g,umolO2_g_h,growth_g_d,umolO2_h,temp_kelvin,obs_growth,obs_metabolic_rates
+1.18,2.97,0.69,6.10,0.01173092,4.209,283.15,growth calculated as log(1.18/100 + 1),standard rates converted absolute rates as 0.69*6.10
+2.11,1.92,1.51,7.82,0.02088048,11.8082,283.15,growth calculated as log(2.11/100 + 1),standard rates converted absolute rates as 1.51*7.82
+3.24,1.57,2.35,5.77,0.03188619,13.5595,283.15,growth calculated as log(3.24/100 + 1),standard rates converted absolute rates as 2.35*5.77
+
+
+
+
+
+
+
+
+
+
+
+
+
+

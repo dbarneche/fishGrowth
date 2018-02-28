@@ -1,0 +1,13 @@
+days    , dry_mass_ug , temp_kelvin , growth_ug_d , ulO2_h ,obs_growth
+20.6871 , 11.1916     , 275.15      , 0.1688120   , 0.1841 ,"growth calculated as instantaneousGrowth(11.1916   , 10.1074  , 20.6871 , 13.9318)"
+21.4324 , 29.545      , 278.15      , 2.1966428   , 0.1557 ,"growth calculated as instantaneousGrowth(29.545    , 10.1237  , 21.4324 , 7.0269 )"
+27.9257 , 57.1085     , 278.15      , 5.7962356   , 0.534  ,"growth calculated as instantaneousGrowth(57.1085   , 29.545   , 27.9257 , 21.4324)"
+35.2303 , 119.5085    , 278.15      , 12.0813191  , 1.569  ,"growth calculated as instantaneousGrowth(119.5085  , 57.1085  , 35.2303 , 27.9257)"
+63.3494 , 636.5577    , 278.15      , 6.7691548   , 2.595  ,"growth calculated as instantaneousGrowth(636.5577  , 593.4673 , 63.3494 , 56.758 )"
+77.3696 , 1014.7132   , 278.15      , 33.7475062  , 1.7631 ,"growth calculated as instantaneousGrowth(1014.7132 , 636.5577 , 77.3696 , 63.3494)"
+13.8548 , 22.224      , 281.15      , 1.8423416   , 0.1692 ,"growth calculated as instantaneousGrowth(22.224    , 11.054   , 13.8548 , 5.4303 )"
+21.0638 , 85.8351     , 281.15      , 16.0889343  , 1.1572 ,"growth calculated as instantaneousGrowth(85.8351   , 22.224   , 21.0638 , 13.8548)"
+28.3811 , 202.398     , 281.15      , 23.7271442  , 1.9478 ,"growth calculated as instantaneousGrowth(202.398   , 85.8351  , 28.3811 , 21.0638)"
+35.204  , 423.597     , 281.15      , 45.8523606  , 4.5327 ,"growth calculated as instantaneousGrowth(423.597   , 202.398  , 35.204  , 28.3811)"
+42.3235 , 703.7799    , 281.15      , 50.1857132  , 3.7364 ,"growth calculated as instantaneousGrowth(703.7799  , 423.597  , 42.3235 , 35.204 )"
+49.4625 , 1404.1507   , 281.15      , 135.8563007 , 3.8429 ,"growth calculated as instantaneousGrowth(1404.1507 , 703.7799 , 49.4625 , 42.3235)"

@@ -1,0 +1,3 @@
+umolO2_g_h,wet_mass_g,growth_g_d,umolO2_h,temp_kelvin,obs_growth
+7.287604, 151.3152,2.283217,1102.725,290.15,"growth calculated as instantaneousGrowth(158.5739, 129.6246, 42, 28); mass at day 37.5 calculated as 129.6246 + instantaneousGrowth(158.5739, 129.6246, 42, 28)*(37.5-28)"
+10.17438, 85.50564,0.3176253,869.9669,295.15,"growth calculated as instantaneousGrowth(86.823, 82.4882, 42, 28); mass at day 37.5 calculated as 82.4882 + instantaneousGrowth(86.823, 82.4882, 42, 28) * (37.5-28)"

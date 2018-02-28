@@ -1,0 +1,10 @@
+days    , dry_mass_ug , temp_kelvin, nmolO2_h, ug_d_dry,obs  
+3.7398  , 137.9529    ,      279.65, 11.2238 ,         , 
+6.655   , 167.2564    ,      279.65, 12.5231 , 11.05111,"growth calculated as instantaneousGrowth(167.2564, 137.9529, 6.655   , 3.7398 )"
+10.7927 , 214.5225    ,      279.65, 14.0339 , 12.90374,"growth calculated as instantaneousGrowth(214.5225, 167.2564, 10.7927 , 6.655  )"
+13.9933 , 263.9005    ,      279.65, 15.9958 , 17.08085,"growth calculated as instantaneousGrowth(263.9005, 214.5225, 13.9933 , 10.7927)"
+17.667  , 299.9767    ,      279.65, 16.0695 , 10.46270,"growth calculated as instantaneousGrowth(299.9767, 263.9005, 17.667  , 13.9933)"
+20.685  , 369.3721    ,      279.65, 19.9116 , 25.46926,"growth calculated as instantaneousGrowth(369.3721, 299.9767, 20.685  , 17.667 )"
+24.75   , 456.7088    ,      279.65, 28.1711 , 23.84564,"growth calculated as instantaneousGrowth(456.7088, 369.3721, 24.75   , 20.685 )"
+27.9341 , 552.8444    ,      279.65, 39.7576 , 33.16799,"growth calculated as instantaneousGrowth(552.8444, 456.7088, 27.9341 , 24.75  )"
+32.9003 , 738.2637    ,      279.65, 52.9883 , 42.99544,"growth calculated as instantaneousGrowth(738.2637, 552.8444, 32.9003 , 27.9341)"

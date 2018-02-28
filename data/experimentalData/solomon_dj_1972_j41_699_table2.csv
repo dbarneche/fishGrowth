@@ -1,0 +1,11 @@
+days,kcal_d,initial_wet_mass_g,final_wet_mass_g, growth_g_d, mgO2_d, obs_growth,obs_metabolic_rates
+28, 5.81, 12.00, 13.70,  0.064825065,   61.42000,"growth calculated as instantaneousGrowth(13.70, 12.00, 28 + 1, 1)","mgO2_d calculated as 5.81*1000*0.296/28 assuming 1 cal = 0.296mgO2"
+28, 7.66, 10.80, 13.20,  0.094601899,   80.97714,"growth calculated as instantaneousGrowth(13.20, 10.80, 28 + 1, 1)","mgO2_d calculated as 7.66*1000*0.296/28 assuming 1 cal = 0.296mgO2"
+28, 4.25, 19.55, 18.75, -0.027978706,   44.92857,"growth calculated as instantaneousGrowth(18.75, 19.55, 28 + 1, 1)","mgO2_d calculated as 4.25*1000*0.296/28 assuming 1 cal = 0.296mgO2"
+28, 3.91, 10.45, 10.26, -0.006723649,   41.33429,"growth calculated as instantaneousGrowth(10.26, 10.45, 28 + 1, 1)","mgO2_d calculated as 3.91*1000*0.296/28 assuming 1 cal = 0.296mgO2"
+29, 5.00, 13.15, 13.65,  0.017565085,   51.03448,"growth calculated as instantaneousGrowth(13.65, 13.15, 29 + 1, 1)","mgO2_d calculated as 5.00*1000*0.296/29 assuming 1 cal = 0.296mgO2"
+31, 3.60, 9.43, 7.35,   -0.059083516,     34.37419,"growth calculated as instantaneousGrowth( 7.35, 9.43, 31 + 1, 1)","mgO2_d calculated as 3.60*1000*0.296/31 assuming 1 cal = 0.296mgO2"
+28, 2.60, 8.39, 7.29,   -0.036589805,     27.48571,"growth calculated as instantaneousGrowth( 7.29, 8.39, 28 + 1, 1)","mgO2_d calculated as 2.60*1000*0.296/28 assuming 1 cal = 0.296mgO2"
+28, 5.08, 18.51, 18.95,  0.015899595,   53.70286,"growth calculated as instantaneousGrowth(18.95, 18.51, 28 + 1, 1)","mgO2_d calculated as 5.08*1000*0.296/28 assuming 1 cal = 0.296mgO2"
+54, 7.19, 12.58, 11.30, -0.022454675,   39.41185,"growth calculated as instantaneousGrowth(11.30, 12.58, 54 + 1, 1)","mgO2_d calculated as 7.19*1000*0.296/54 assuming 1 cal = 0.296mgO2"
+30, 3.80, 7.20, 6.70,   -0.016074082,     37.49333,"growth calculated as instantaneousGrowth( 6.70, 7.20, 30 + 1, 1)","mgO2_d calculated as 3.80*1000*0.296/30 assuming 1 cal = 0.296mgO2"

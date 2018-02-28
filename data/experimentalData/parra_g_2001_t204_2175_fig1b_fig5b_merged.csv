@@ -1,0 +1,14 @@
+days,dry_mass_ug,temp_kelvin,nmolO2_h,growth_ug_day,obs
+0.0655,13.4433,292.65,,,mass estimated from general curve
+2.2163,16.7727,292.65,,,mass estimated from general curve
+4.9775,24.9416,292.65,9.0426,3.584109,"growth calculated as: instantaneousGrowth(24.9416,16.7727,4.9775,2.2163)"
+7.9956,38.8411,292.65,7.7334,5.700391,"growth calculated as: instantaneousGrowth(38.8411,24.9416,7.9956,4.9775)"
+10.0175,43.3724,292.65,14.291,2.36703,"growth calculated as: instantaneousGrowth(43.3724,38.8411,10.0175,7.9956)"
+13.0352,63.3093,292.65,22.1497,7.934567,"growth calculated as: instantaneousGrowth(63.3093,43.3724,13.0352,10.0175)"
+15.0262,89.9108,292.65,36.4017,15.841002,"growth calculated as: instantaneousGrowth(89.9108,63.3093,15.0262,13.0352)"
+17.1116,86.5901,292.65,25.3784,-1.562582,"growth calculated as: instantaneousGrowth(86.5901,89.9108,17.1116,15.0262)"
+19.0063,122.9773,292.65,36.0308,22.769934,"growth calculated as: instantaneousGrowth(122.9773,86.5901,19.0063,17.1116)"
+22.0881,171.3921,292.65,64.6425,18.461391,"growth calculated as: instantaneousGrowth(171.3921,122.9773,22.0881,19.0063)"
+25.0421,274.4193,292.65,67.179,43.727175,"growth calculated as: instantaneousGrowth(274.4193,171.3921,25.0421,22.0881)"
+28.0276,378.946,292.65,171.194,40.964562,"growth calculated as: instantaneousGrowth(378.946,274.4193,28.0276,25.0421)"
+30.051,584.8728,292.65,281.2812,125.449831,"growth calculated as: instantaneousGrowth(584.8728,378.946,30.051,28.0276)"
