@@ -2,7 +2,9 @@
 
 This repository contains code and data needed to reproduce the article:
 
-**Barneche DR, Allen AP** (in press) The energetics of fish growth and how it constrains food-web trophic structure. *Ecology Letters*. doi: 10.1111/ele.12947.
+**Barneche DR, Allen AP** (in press) The energetics of fish growth and how it constrains food-web trophic structure. *Ecology Letters*. doi: 10.1111/ele.12947.  
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1186364.svg)](https://doi.org/10.5281/zenodo.1186364)  
 
 ## Instructions
 
