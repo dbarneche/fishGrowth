@@ -149,10 +149,10 @@ targets:
     command: makeFigure2(dest = target_name, fishBaseGrowthDataWithEm, growthEmData, tempDependenceEmFishBaseData, tempDependenceEmExperimentalData)
 
   output/figures/fig3.pdf:
-    command: makeFigure3(dest = target_name)
+    command: makeFigure3(dest = target_name, standardMetabolicRatesFitFullMinusAspectRatio)
 
   output/figures/fig4.pdf:
-    command: makeFigure4(dest = target_name)
+    command: makeFigure4(dest = target_name, standardMetabolicRatesFitFullMinusAspectRatio)
 
   output/figures/figS1.pdf:
     command: makeFigureS1(dest = target_name, growthFishBase)

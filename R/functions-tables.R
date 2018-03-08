@@ -37,6 +37,15 @@ makeTableS1  <-  function (fullModel, simplerModel, simplestModel) {
     brmsOutSimpler   <-  t(brms::posterior_samples(simplerModel, pars = pSimpler, exact_match = TRUE, as.matrix = TRUE))[pSimpler, ]
     brmsOutSimplest  <-  t(brms::posterior_samples(simplestModel, pars = pSimplest, exact_match = TRUE, as.matrix = TRUE))[pSimplest, ]
 	
+    # transform logitEr values to Er
+    transformLogitEr  <-  function (mat) {
+    	mat['b_logitEr_Intercept', ]  <-  mat['b_Ei_Intercept', ] / (1 + exp(-1 * mat['b_logitEr_Intercept', ]))
+    	mat	
+    }
+	brmsOutFull      <-  transformLogitEr(brmsOutFull)
+	brmsOutSimpler   <-  transformLogitEr(brmsOutSimpler)
+	brmsOutSimplest  <-  transformLogitEr(brmsOutSimplest)
+
 	sumTab  <-  function (output) {
 		plyr::adply(output, 1, function (x) {
 			qts  <-  quantile(x, probs = c(0.025, 0.975))
@@ -44,9 +53,15 @@ makeTableS1  <-  function (fullModel, simplerModel, simplestModel) {
 		})
 	}
 	
-	sumTabFull      <-  sumTab(brmsOutFull)
-	sumTabSimpler   <-  sumTab(brmsOutSimpler)
-	sumTabSimplest  <-  sumTab(brmsOutSimplest)
+	# transform intercepts to J / g
+	transformBoToJ  <-  function (mat) {
+		mat[mat$parameters == 'b_lnBoTs_Intercept', c('Estimate', 'l95_CI', 'u95_CI')]  <-  mat[mat$parameters == 'b_lnBoTs_Intercept', c('Estimate', 'l95_CI', 'u95_CI')] + log(39e3)
+		mat
+	}
+	sumTabFull      <-  transformBoToJ(sumTab(brmsOutFull))
+	sumTabSimpler   <-  transformBoToJ(sumTab(brmsOutSimpler))
+	sumTabSimplest  <-  transformBoToJ(sumTab(brmsOutSimplest))
+
 	cbind(
 		  rbind(tableRounding(as.matrix(sumTabFull[1:7, 2:4]), 2), matrix(rep('', 6), 2, 3), tableRounding(as.matrix(sumTabFull[8:nrow(sumTabFull), 2:4]), 2)),
 		  rbind(tableRounding(as.matrix(sumTabSimpler[1:6, 2:4]), 2), matrix(c(rep('-', 3), rep('', 6)), 3, 3, byrow = TRUE), tableRounding(as.matrix(sumTabSimpler[7:nrow(sumTabSimpler), 2:4]), 2)),

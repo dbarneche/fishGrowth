@@ -270,14 +270,17 @@ fig2  <-  function (fishBaseGrowthDataWithEm, growthEmData, tempDependenceEmFish
 
 }
 
-makeFigure3  <-  function (dest) {
-    toPdf(fig3(), dest, width = 7, height = 6.5)
+makeFigure3  <-  function (dest, ...) {
+    toPdf(fig3(...), dest, width = 7, height = 6.5)
     extrafont::embed_fonts(dest)
 }
 
-fig3  <-  function () {
-    Bo              <-  exp(-6.23) * 2880e3 / 6 / 12 # Bo for standard rates
-    alpha           <-  0.75
+fig3  <-  function (stdRateModelOutput) {
+    # parameter values from best resting metabolic rate model
+    # transform resting metabolic rate bo to J/d
+    stdRatePars     <-  brms::fixef(stdRateModelOutput)
+    Bo              <-  exp(stdRatePars['lnBoTs_Intercept', 'Estimate'] + log(39e3)) # Bo for standard rates from SI (Model II) transformed to J/d
+    alpha           <-  round(stdRatePars['scalingAlpha_Intercept', 'Estimate'], 2)
     asympMass       <-  100 # arbitrary asymptotic size
     mass            <-  seq(1, 98, length.out = 600) # arbitrary mass, so it's easy to calculate mass / asympMass
     energiesVector  <-  list(Em = NA, Ec = 24000 * 0.15) # Ec value takes into account water content of biomass 
@@ -311,16 +314,18 @@ fig3  <-  function () {
     LoLinR::proportionalLabel(c(0.82, 0.91), c(0.74, 0.74), text = FALSE, type = 'l', lty = 3, log = 'y')
 }
 
-makeFigure4  <-  function (dest) {
-    toPdf(fig4(), dest, width = 7, height = 7.5)
+makeFigure4  <-  function (dest, ...) {
+    toPdf(fig4(...), dest, width = 7, height = 7.5)
     extrafont::embed_fonts(dest)
 }
 
-fig4  <-  function () {
-    # basic parameter values
-    Bo              <-  exp(-6.23) * 2880e3 / 6 / 12 # Bo for standard rates
+fig4  <-  function (stdRateModelOutput) {
+    # parameter values from best resting metabolic rate model
+    # transform resting metabolic rate bo to J/d
+    stdRatePars     <-  brms::fixef(stdRateModelOutput)
+    Bo              <-  exp(stdRatePars['lnBoTs_Intercept', 'Estimate'] + log(39e3)) # Bo for standard rates from SI (Model II) transformed to J/d
     energiesVector  <-  list(Em = NA, Ec = 24000 * 0.15) # Ec value takes into account water content of biomass
-    alpha           <-  0.75
+    alpha           <-  round(stdRatePars['scalingAlpha_Intercept', 'Estimate'], 2)
     asympMass       <-  100  # arbitrary asymptotic size    
     fRatio          <-  2.4
 
