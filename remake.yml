@@ -10,9 +10,9 @@ packages:
   - RColorBrewer
 
 sources:
-  - R/functions-analyses.R
-  - R/functions-figures.R
-  - R/functions-tables.R
+  - R/analyses.R
+  - R/figures.R
+  - R/tables.R
 
 targets:
   all:
@@ -57,7 +57,7 @@ targets:
   # Length-weight table:
   # http://www.fishbase.de/Topic/List.php?group=12
   # downloaded on 15/07/2017
-  # Please see the stashed file R/functions-fishBaseDownload.R
+  # Please see the stashed file R/fishBaseDownload.R
   # to access the original code used to scrape the data from FishBase
   trophicLevelData:
     command: readFile('data/fishBaseData/trophicLevelData.csv')
