@@ -34,7 +34,7 @@ And then install the package `fontcm`, via `extrafont`. This installs the font `
 extrafont::font_install('fontcm')
 ```
 
-Then, to generate all figures, analyses, and manuscript (.docx, using Rmarkdown), simply do:
+Then, to generate all figures, analyses, and tables, simply run:
 
 ```r
 remake::make()
